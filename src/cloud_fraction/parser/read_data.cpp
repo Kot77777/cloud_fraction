@@ -19,17 +19,17 @@ namespace cloud_fraction {
 
             if (!file.is_open()) { throw std::runtime_error("Ошибка открытия файла!"); }
 
-            //считываем номер дня в году.
+            //Считываем номер дня в году.
             std::getline(file, line);
             std::istringstream(line) >> index;
-            //получаем index в векторе начиная, с которого нужно заполнять его данными за один день.
+            //Получаем index в векторе начиная, с которого нужно заполнять его данными за один день.
             index *= 180 * 360;
 
-            //считываем строку данных.
+            //Считываем строку данных.
             std::getline(file, line);
             std::istringstream iss(line);
 
-            //инициализируем вектор, нвчиная с индекса index.
+            //Инициализируем вектор, нвчиная с индекса index.
             while (iss >> num) { res[index++] = num; }
         }
 
