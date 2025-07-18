@@ -1,0 +1,115 @@
+\doxysection{cloud\+\_\+fraction\+::cloud Class Reference}
+\hypertarget{classcloud__fraction_1_1cloud}{}\label{classcloud__fraction_1_1cloud}\index{cloud\_fraction::cloud@{cloud\_fraction::cloud}}
+
+
+{\ttfamily \#include $<$cloud.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcloud__fraction_1_1cloud_aa7c43174b07512ea10fe9088003bb388}{cloud}} (const std\+::filesystem\+::path \&path, double bound)
+\item 
+double \mbox{\hyperlink{classcloud__fraction_1_1cloud_aba45f3baadeaeb41a3cc838f51a34a05}{cloud\+\_\+fraction}} (double num\+\_\+day, double width, double len) const
+\begin{DoxyCompactList}\small\item\em Функция возвращает значение облачности по номеру дня, широте и долготе. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcloud__fraction_1_1cloud_ae14d53137c9831bc9f52302d1000fbea}{operator()}} (double num\+\_\+day, double width, double len) const
+\begin{DoxyCompactList}\small\item\em Функция по пороговому значению определяет облачно или нет. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcloud__fraction_1_1cloud_a74294a9ee6523c5528314e517cc8b669}{data\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcloud__fraction_1_1cloud_aa21dca30b4270c3fa6f97c1370975862}{bound\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcloud__fraction_1_1cloud_aa7c43174b07512ea10fe9088003bb388}\label{classcloud__fraction_1_1cloud_aa7c43174b07512ea10fe9088003bb388} 
+\index{cloud\_fraction::cloud@{cloud\_fraction::cloud}!cloud@{cloud}}
+\index{cloud@{cloud}!cloud\_fraction::cloud@{cloud\_fraction::cloud}}
+\doxysubsubsection{\texorpdfstring{cloud()}{cloud()}}
+{\footnotesize\ttfamily cloud\+\_\+fraction\+::cloud\+::cloud (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{path,  }\item[{double}]{bound }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcloud__fraction_1_1cloud_aba45f3baadeaeb41a3cc838f51a34a05}\label{classcloud__fraction_1_1cloud_aba45f3baadeaeb41a3cc838f51a34a05} 
+\index{cloud\_fraction::cloud@{cloud\_fraction::cloud}!cloud\_fraction@{cloud\_fraction}}
+\index{cloud\_fraction@{cloud\_fraction}!cloud\_fraction::cloud@{cloud\_fraction::cloud}}
+\doxysubsubsection{\texorpdfstring{cloud\_fraction()}{cloud\_fraction()}}
+{\footnotesize\ttfamily double cloud\+\_\+fraction\+::cloud\+::cloud\+\_\+fraction (\begin{DoxyParamCaption}\item[{double}]{num\+\_\+day,  }\item[{double}]{width,  }\item[{double}]{len }\end{DoxyParamCaption}) const}
+
+
+
+Функция возвращает значение облачности по номеру дня, широте и долготе. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+day} & Номер дня в году (может быть и дробным) $ \in [0; 366) $. \\
+\hline
+{\em width} & Координата по долготе, \mbox{[}рад\mbox{]}. \\
+\hline
+{\em len} & Координата по широте, \mbox{[}рад\mbox{]}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает значение облачности $ \in [0; 1] $.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Танов К. Л. 
+\end{DoxyAuthor}
+\Hypertarget{classcloud__fraction_1_1cloud_ae14d53137c9831bc9f52302d1000fbea}\label{classcloud__fraction_1_1cloud_ae14d53137c9831bc9f52302d1000fbea} 
+\index{cloud\_fraction::cloud@{cloud\_fraction::cloud}!operator()@{operator()}}
+\index{operator()@{operator()}!cloud\_fraction::cloud@{cloud\_fraction::cloud}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily bool cloud\+\_\+fraction\+::cloud\+::operator() (\begin{DoxyParamCaption}\item[{double}]{num\+\_\+day,  }\item[{double}]{width,  }\item[{double}]{len }\end{DoxyParamCaption}) const}
+
+
+
+Функция по пороговому значению определяет облачно или нет. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+day} & Номер дня в году (может быть и дробным) $ \in [0; 366) $. \\
+\hline
+{\em width} & Координата по долготе, \mbox{[}рад\mbox{]}. \\
+\hline
+{\em len} & Координата по широте, \mbox{[}рад\mbox{]}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает true, если значение облачности меньше порогового, иначе false.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Танов К. Л. 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcloud__fraction_1_1cloud_aa21dca30b4270c3fa6f97c1370975862}\label{classcloud__fraction_1_1cloud_aa21dca30b4270c3fa6f97c1370975862} 
+\index{cloud\_fraction::cloud@{cloud\_fraction::cloud}!bound\_@{bound\_}}
+\index{bound\_@{bound\_}!cloud\_fraction::cloud@{cloud\_fraction::cloud}}
+\doxysubsubsection{\texorpdfstring{bound\_}{bound\_}}
+{\footnotesize\ttfamily double cloud\+\_\+fraction\+::cloud\+::bound\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bound\+\_\+} & Пороговое значение облачности. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcloud__fraction_1_1cloud_a74294a9ee6523c5528314e517cc8b669}\label{classcloud__fraction_1_1cloud_a74294a9ee6523c5528314e517cc8b669} 
+\index{cloud\_fraction::cloud@{cloud\_fraction::cloud}!data\_@{data\_}}
+\index{data\_@{data\_}!cloud\_fraction::cloud@{cloud\_fraction::cloud}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ cloud\+\_\+fraction\+::cloud\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+} & Вектор из годовых значений облачности. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cloud\+\_\+fraction/parser/\mbox{\hyperlink{cloud_8hpp}{cloud.\+hpp}}\item 
+src/cloud\+\_\+fraction/parser/\mbox{\hyperlink{cloud_8cpp}{cloud.\+cpp}}\end{DoxyCompactItemize}

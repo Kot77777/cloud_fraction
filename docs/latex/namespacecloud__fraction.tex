@@ -1,0 +1,42 @@
+\doxysection{cloud\+\_\+fraction Namespace Reference}
+\hypertarget{namespacecloud__fraction}{}\label{namespacecloud__fraction}\index{cloud\_fraction@{cloud\_fraction}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcloud__fraction_1_1cloud}{cloud}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{namespacecloud__fraction_abb6044af5c116b0d92d6a0b2d4a7871d}{read\+\_\+data}} (const std\+::filesystem\+::path \&path)
+\begin{DoxyCompactList}\small\item\em Функция считывает данные об облачности. Данные прдставлены в виде 366 файлов, в которых хранятся результаты дневной облачности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecloud__fraction_abb6044af5c116b0d92d6a0b2d4a7871d}\label{namespacecloud__fraction_abb6044af5c116b0d92d6a0b2d4a7871d} 
+\index{cloud\_fraction@{cloud\_fraction}!read\_data@{read\_data}}
+\index{read\_data@{read\_data}!cloud\_fraction@{cloud\_fraction}}
+\doxysubsubsection{\texorpdfstring{read\_data()}{read\_data()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ cloud\+\_\+fraction\+::read\+\_\+data (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Функция считывает данные об облачности. Данные прдставлены в виде 366 файлов, в которых хранятся результаты дневной облачности. 
+
+Данные в файле записаны следующим образаом\+:
+\begin{DoxyItemize}
+\item 1 строка -\/ номер дня начиная с нуля. Благодаря этой информации можно получить индекс, начиная с которого будут заполняться данные в вектор за один день в году\+: index = 360 \texorpdfstring{$\ast$}{*} 180 \texorpdfstring{$\ast$}{*} n, где n -\/ номер дня.
+\item 2 строка -\/ 360 \texorpdfstring{$\ast$}{*} 180 значений облпчности (в промежутке\+: \mbox{[}0; 1\mbox{]}), вычисленные на сетке с длиной и шириной кадрата в 1 градус. Данные записаны через пробел. Эти значения записываюся в вектор, начиная с индекса\+: index.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Путь до папки, где хранятся файлы о дневной облачности за 2024 год.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает вектор из 366 \texorpdfstring{$\ast$}{*} 360 \texorpdfstring{$\ast$}{*} 180 значений облачности.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Танов К. Л. 
+\end{DoxyAuthor}

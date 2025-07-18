@@ -1,0 +1,17 @@
+<map id="src/cloud_fraction/parser/cloud.cpp" name="src/cloud_fraction/parser/cloud.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="159,5,297,45"/>
+<area shape="rect" id="Node000002" href="$cloud_8hpp.html" title=" " alt="" coords="5,93,91,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,48,88,90,86,85,184,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="254,93,317,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="244,44,271,80,267,84,240,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="341,93,419,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="266,43,346,84,344,89,263,48"/>
+<area shape="rect" id="Node000007" href="$read__data_8hpp.html" title="Функция для чтения данных об облачности за 2024 год." alt="" coords="115,93,229,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="217,47,190,84,186,80,212,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="27,167,90,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="52,119,58,153,52,154,47,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,167,211,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="68,116,136,157,133,162,65,121"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="155,121,90,162,87,157,152,116"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="174,119,170,153,165,153,168,119"/>
+</map>
