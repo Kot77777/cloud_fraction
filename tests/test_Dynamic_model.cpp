@@ -10,7 +10,7 @@ TEST(Dynamic_model, test1) {
     const double n = 7;
 
     cloud_fraction::Dynamic_model d(step_t, delta, sigma, n, folder_path);
-    const double cf1 = d.cloud_fraction(129, 0, 0);
-    const double cf2 = d.cloud_fraction(120, 0, 0);
+    const double cf1 = d.cloud_fraction(129, 0.878, 0);
+    const double cf2 = d.cloud_fraction(128, 0.878, 0);
 
 }

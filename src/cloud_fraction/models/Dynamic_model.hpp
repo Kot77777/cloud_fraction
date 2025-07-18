@@ -6,11 +6,11 @@
 namespace cloud_fraction {
     class Dynamic_model {
         /**
-         * @param data_ Вектор, в котором хранятся данные облачности в окрестноти времени t.
+         * @param data_loc_ Вектор, в котором хранятся данные облачности в окрестноти времени t.
          */
         std::vector<double> data_loc_;
         /**
-         * @param
+         * @param data_ Вектор из годовых значений облачности.
          */
         std::vector<double> data_;
         /**
@@ -38,8 +38,6 @@ namespace cloud_fraction {
         Dynamic_model(double step_t, double delta, double sigma, double n, const std::filesystem::path &path);
 
         [[nodiscard]] double get_value(double t, double width, double len) const;
-
-        [[nodiscard]] double mu(double t, double width, double len) const;
 
         [[nodiscard]] double time_bound(double t) const;
 
