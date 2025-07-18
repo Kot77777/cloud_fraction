@@ -2,14 +2,14 @@
 
 #include <numbers>
 #include <vector>
-#include "cloud_fraction/parser/cloud.hpp"
+#include "cloud_fraction/models//Static_model.hpp"
 #include "cloud_fraction/parser/read_data.hpp"
 
-TEST(cloud_fraction, test1) {
+TEST(Static_model, test_cloud_fraction_1) {
     const double pi = std::numbers::pi_v<double>;
 
     const std::filesystem::path folder_path = "/home/kostya/Documents/cloud_fraction/processed_data";
-    const cloud_fraction::cloud vec_cf(folder_path, 0.5);
+    const cloud_fraction::Static_model vec_cf(folder_path, 0.5);
 
     const auto check = [&](const double num_day, const double width, const double len, const double exp) {
         ASSERT_EQ(vec_cf.cloud_fraction(num_day, width, len), exp);
@@ -47,12 +47,12 @@ TEST(cloud_fraction, test1) {
     }
 }
 
-TEST(cloud_fraction, test2) {
+TEST(Static_model, test_cloud_fraction_2) {
     const double pi = std::numbers::pi_v<double>;
 
     const std::filesystem::path folder_path = "/home/kostya/Documents/cloud_fraction/processed_data";
     const std::vector<double> data = cloud_fraction::read_data(folder_path);
-    const cloud_fraction::cloud vec_cf(folder_path, 0.5);
+    const cloud_fraction::Static_model vec_cf(folder_path, 0.5);
 
     const auto check = [&](const double num_day, const double width, const double len, const double exp) {
         ASSERT_EQ(vec_cf.cloud_fraction(num_day, width, len), exp);
