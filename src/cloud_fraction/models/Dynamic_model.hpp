@@ -37,6 +37,8 @@ namespace cloud_fraction {
     public:
         Dynamic_model(double step_t, double delta, double sigma, double n, const std::filesystem::path &path);
 
+        [[nodiscard]] double get_data(std::size_t i) const;
+
         [[nodiscard]] double get_value(double t, double width, double len) const;
 
         [[nodiscard]] double time_bound(double t) const;

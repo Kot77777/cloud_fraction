@@ -65,6 +65,7 @@ TEST(Static_model, test_cloud_fraction_2) {
             return 360 * (i * 180 + n) + m;
         };
 
+        //i = *.5, то есть в каждом дне проверяется полдень.
         for (double i = 0.5; i < 366; ++i) {
             check(i, deg_to_rad(90), deg_to_rad(-180), data[index(i, 0, 0)]);
             check(i, deg_to_rad(65.3), deg_to_rad(-167.9), data[index(i, 24, 12)]);
